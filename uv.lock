@@ -3,6 +3,18 @@ revision = 3
 requires-python = ">=3.14"
 
 [[package]]
+name = "ctklistbox"
+version = "1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "customtkinter" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3a/20/a96b8ef7da7ece49ada9f409cc83280d41a59d4e9088c6a65320fb3d8455/ctklistbox-1.5.tar.gz", hash = "sha256:21ed8431375572352d0c0d0cab6f680dda56cf8da2262a389e74545f01b3fa8e", size = 6909, upload-time = "2025-03-14T14:47:58.267Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/90/3c/ad449c54fbd93b67f9a81f79122df3c4806af695c192e4ea4e35fc6ada5e/ctklistbox-1.5-py3-none-any.whl", hash = "sha256:139434219ca6194870a2fc9c67e35426c6a1dc2cb5fe9a57c21a0d0b00e5a7af", size = 7232, upload-time = "2025-03-14T14:47:56.726Z" },
+]
+
+[[package]]
 name = "customtkinter"
 version = "6.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -38,8 +50,12 @@ name = "taskmanager"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "ctklistbox" },
     { name = "customtkinter" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "customtkinter", specifier = ">=6.0.0" }]
+requires-dist = [
+    { name = "ctklistbox", specifier = ">=1.5" },
+    { name = "customtkinter", specifier = ">=6.0.0" },
+]
