@@ -1,2 +1,2 @@
 def main() -> None:
-    print("Hello from taskmanager!")
+    print("Hello from notemanager!")
