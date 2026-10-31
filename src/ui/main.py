@@ -1,8 +1,6 @@
 import customtkinter as ctk
 import CTkListbox as ctl
 
-
-
 app = ctk.CTk()
 app.geometry("800x600")
 app.title("TaskManager")
@@ -35,20 +33,13 @@ textbox = ctk.CTkTextbox(
 )
 textbox.grid(row=1, column=0, padx=10, pady=10, sticky="nwes")
 
-tasktitle_text = ctk.CTkLabel(list_information_frame, text="Your task title:")
-tasktitle_text.grid(row=2, column=0, padx=5, pady=5, sticky="w")
+notetitle_entry = ctk.CTkEntry(list_information_frame, placeholder_text="Enter a title for your note", width=170)
+notetitle_entry.grid(row=3, column=0, padx=5, pady=5, sticky="w")
 
-tasktitle_entry = ctk.CTkEntry(list_information_frame)
-tasktitle_entry.grid(row=3, column=0, padx=5, pady=5, sticky="w")
+notetitle_save = ctk.CTkButton(list_information_frame, text="Save Title")
+notetitle_save.grid(row=4, column=0, padx=5, pady=5, sticky="w")
 
-task_completed = ctk.CTkCheckBox(
-    list_information_frame, 
-    text="Completed", 
-    command=completed_check, 
-    variable=check, 
-    onvalue="completed", 
-    offvalue="not_completed"
-)
-task_completed.grid(row=4, sticky="w")
+notesave = ctk.CTkButton(list_information_frame, text="Save Note")
+notesave.grid(row=5, column=0, padx=5, pady=5, sticky="w")
 
 app.mainloop()
